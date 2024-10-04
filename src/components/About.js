@@ -32,11 +32,11 @@ function About() {
           About Me
         </h2>
         <p style={{ ...styles.text, opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(-20px)', transition: 'opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s' }}>
-          I'm John Doe, a passionate Full-Stack Developer with expertise in building web applications. 
-          I specialize in creating efficient and scalable solutions using modern web technologies.
+        I'm Karun Choudhary, an aspiring Full-Stack Developer with a keen interest in building web applications.
+         As a beginner, I am eager to learn and explore modern web technologies while continuously improving my skills.
         </p>
         <p style={{ ...styles.text, opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(-20px)', transition: 'opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s' }}>
-          Apart from coding, I enjoy traveling and contributing to open-source projects, continuously learning and exploring new technologies.
+        In addition to coding, I enjoy traveling and seeking opportunities to grow in the field of web development.
         </p>
       </div>
     </section>

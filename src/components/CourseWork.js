@@ -1,14 +1,20 @@
 // src/components/CourseWork.js
 import React, { useState } from 'react';
 import './CourseWork.css'; // Import the CSS file for styles
-import { FaLaptopCode, FaDatabase, FaRobot, FaBrain } from 'react-icons/fa'; // Import icons from React Icons
+import { FaLaptopCode, FaDatabase, FaRobot, FaBrain, FaDesktop, FaNetworkWired, FaMicrochip, FaChartLine, FaBars, FaCode } from 'react-icons/fa';
+
 
 const courseData = [
   { title: 'Web Development Bootcamp', description: 'A comprehensive bootcamp focusing on HTML, CSS, JavaScript, and React.', icon: <FaLaptopCode /> },
-  { title: 'Data Science Specialization', description: 'Studied data analysis, machine learning, and visualization techniques.', icon: <FaDatabase /> },
-  { title: 'Machine Learning with Python', description: 'Explored machine learning algorithms and their applications using Python.', icon: <FaRobot /> },
-  { title: 'Artificial Intelligence Foundations', description: 'Fundamentals of AI concepts and applications.', icon: <FaBrain /> },
+  { title: 'Operating System', description: 'Learned about process management, memory management, and file systems.', icon: <FaDesktop /> },
+  { title: 'Database Management System', description: 'Studied relational databases, SQL, and data modeling.', icon: <FaDatabase /> },
+  { title: 'Computer Networks', description: 'Explored network architectures, protocols, and security.', icon: <FaNetworkWired /> },
+  { title: 'Computer Architecture', description: 'Understanding CPU design, memory hierarchy, and instruction sets.', icon: <FaMicrochip /> },
+  { title: 'Statistical Methods in Artificial Intelligence', description: 'Applied statistical techniques for data analysis and modeling in AI.', icon: <FaChartLine /> },
+  { title: 'Data Structures', description: 'Learned about arrays, linked lists, stacks, queues, and trees.', icon: <FaBars /> },
+  { title: 'Algorithms', description: 'Studied sorting, searching, and optimization algorithms.', icon: <FaCode /> },
 ];
+
 
 function CourseWork() {
   const [hoveredCourse, setHoveredCourse] = useState(null);

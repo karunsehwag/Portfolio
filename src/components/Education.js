@@ -11,45 +11,45 @@ function Education() {
         
         <div className="educationItem" style={styles.educationItem}>
           <FaGraduationCap style={styles.icon} />
-          <h3 style={styles.degree}>Bachelor of Science in Computer Science</h3>
-          <p style={styles.school}>XYZ University, 2015 - 2019</p>
+          <h3 style={styles.degree}>Master in Computer Science and Engineering</h3>
+          <p style={styles.school}>IIIT HYDERABAD, 2023 - PRESENT</p>
           <p style={styles.description}>
             Graduated with a focus on software engineering and web development.
             <br />
-            CGPA: 3.8/4.0
+            CGPA: 6.94
           </p>
         </div>
 
         <div className="educationItem" style={styles.educationItem}>
           <FaUniversity style={styles.icon} />
-          <h3 style={styles.degree}>Master of Science in Artificial Intelligence</h3>
-          <p style={styles.school}>ABC Institute of Technology, 2019 - 2021</p>
+          <h3 style={styles.degree}>Bachelor in Computer Science and Engineering</h3>
+          <p style={styles.school}>IIIT BHOPAL, 2018 - 2022</p>
           <p style={styles.description}>
-            Specialized in machine learning and deep learning applications.
+          Graduated with a focus on software engineering and web development.
             <br />
-            CGPA: 3.9/4.0
+            CGPA: 8.35
           </p>
         </div>
 
         <div className="educationItem" style={styles.educationItem}>
           <FaSchool style={styles.icon} />
           <h3 style={styles.degree}>12th Grade</h3>
-          <p style={styles.school}>ABC High School, 2014 - 2015</p>
+          <p style={styles.school}>KL International School, Meerut, 2015 - 2017</p>
           <p style={styles.description}>
             Completed with a focus on Science and Mathematics. 
             <br />
-            Marks: 85% | Grade: A
+            Marks: 92% | Grade: A
           </p>
         </div>
 
         <div className="educationItem" style={styles.educationItem}>
           <FaSchool style={styles.icon} />
           <h3 style={styles.degree}>10th Grade</h3>
-          <p style={styles.school}>XYZ Secondary School, 2012 - 2014</p>
+          <p style={styles.school}>BDS International School, Meerut, 2013 - 2015</p>
           <p style={styles.description}>
             Completed with a broad curriculum.
             <br />
-            Marks: 90% | Grade: A+
+            CGPA: 10
           </p>
         </div>
 

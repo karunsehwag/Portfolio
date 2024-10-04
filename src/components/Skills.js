@@ -2,11 +2,16 @@
 import React, { useState } from 'react';
 
 const skillsData = [
-  { skill: 'JavaScript', level: 90 },
-  { skill: 'React', level: 85 },
-  { skill: 'Node.js', level: 80 },
+  { skill: 'C/C++', level: 70 },
+  { skill: 'Python', level: 40 },
+  { skill: 'Java', level: 40 },
+  { skill: 'JavaScript', level: 60 },
+  { skill: 'React', level: 50 },
+  { skill: 'Node.js', level: 70 },
   { skill: 'CSS', level: 75 },
-  { skill: 'Python', level: 70 },
+  { skill: 'SQL', level: 50 },
+  { skill: 'Mongodb', level: 60 },
+  { skill: 'Shell', level: 50 },
 ];
 
 function Skills() {

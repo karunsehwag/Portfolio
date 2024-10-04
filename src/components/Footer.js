@@ -6,18 +6,12 @@ function Footer() {
   return (
     <footer style={styles.footer}>
       <div style={styles.container}>
-        <p style={styles.copy}>&copy; 2024 John Doe. All rights reserved.</p>
+        <p style={styles.copy}></p>
         <div style={styles.socialLinks}>
-          <a href="https://facebook.com" style={styles.icon} target="_blank" rel="noopener noreferrer">
-            <FaFacebook />
-          </a>
-          <a href="https://twitter.com" style={styles.icon} target="_blank" rel="noopener noreferrer">
-            <FaTwitter />
-          </a>
-          <a href="https://linkedin.com" style={styles.icon} target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/karun-choudhary-108982191" style={styles.icon} target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
-          <a href="https://github.com" style={styles.icon} target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/karunsehwag" style={styles.icon} target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
         </div>

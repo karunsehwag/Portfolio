@@ -9,13 +9,13 @@ function Header() {
     <header className="header" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="overlay"></div>
       <div className="icons">
-        <a href="https://www.linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer" className="icon-link">
+        <a href="https://www.linkedin.com/in/karun-choudhary-108982191" target="_blank" rel="noopener noreferrer" className="icon-link">
           <FaLinkedin size={20} />
         </a>
-        <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer" className="icon-link">
+        <a href="https://github.com/karunsehwag" target="_blank" rel="noopener noreferrer" className="icon-link">
           <FaGithub size={20} />
         </a>
-        <a href="tel:+1234567890" className="icon-link">
+        <a href="tel:917060491349" className="icon-link">
           <FaPhone size={20} />
         </a>
         <a 

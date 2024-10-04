@@ -4,11 +4,10 @@ import React from 'react';
 import { FaTrophy } from 'react-icons/fa'; // Import trophy icon
 
 function Achievements() {
-  const achievementsData = [
-    { year: 2021, achievement: 'Completed a Data Science Bootcamp with distinction.' },
-    { year: 2020, achievement: 'Received the Dean’s List award for academic excellence.' },
-    { year: 2019, achievement: 'Developed an award-winning project at the tech fair.' },
-    { year: 2018, achievement: 'Participated in a national hackathon and won 2nd place.' },
+  const achievementsData =  [
+    { year: 2024, achievement: 'Completed more than 700 coding questions ' },
+    { year: 2023, achievement: 'Cleared Gate' },
+    { year: 2018, achievement: 'Claered Jee mains' },
   ];
 
   return (

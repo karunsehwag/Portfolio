@@ -6,15 +6,29 @@ const projectsData = [
   {
     title: 'Portfolio Website',
     description: 'A personal portfolio website built with React.',
-    liveLink: 'https://example.com/portfolio', // Example link
-    repoLink: 'https://github.com/your-username/portfolio', // Example GitHub link
+    liveLink: 'https://karunchoudhary-34e3b0cc959e.herokuapp.com/', // Example link
+    repoLink: 'https://github.com/karunsehwag/Portfolio', // Example GitHub link
     readMoreLink: 'https://example.com/portfolio-details', // Example Read More link
   },
   {
-    title: 'Todo App',
+    title: 'Seam Carver',
+    description: 'A simple task manager built with Node.js and Express.',
+    liveLink: 'https://seam-carving-1.onrender.com/', // Example link
+    repoLink: 'https://github.com/karunsehwag/seam_carving', // Example GitHub link
+    readMoreLink: 'https://example.com/todo-app-details', // Example Read More link
+  },
+  {
+    title: 'Books Library',
     description: 'A simple task manager built with Node.js and Express.',
     liveLink: 'https://example.com/todo-app', // Example link
-    repoLink: 'https://github.com/your-username/todo-app', // Example GitHub link
+    repoLink: 'https://github.com/serc-courses/se-project-1--_27', // Example GitHub link
+    readMoreLink: 'https://example.com/todo-app-details', // Example Read More link
+  },
+  {
+    title: 'Kids Game',
+    description: 'A simple task manager built with Node.js and Express.',
+    liveLink: 'https://example.com/todo-app', // Example link
+    repoLink: 'https://github.com/serc-courses/se-project-1--_27', // Example GitHub link
     readMoreLink: 'https://example.com/todo-app-details', // Example Read More link
   },
 ];
