@@ -1,0 +1,155 @@
+.header {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Set height as needed */
+    background-image: url('../image.png'); /* Add your image URL here */
+    background-size: contain; /* Ensure the image fits within the container */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: center; /* Center the image */
+    color: white; /* Text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Prevent overflow */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation for header */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Make the overlay cover the entire header */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)); /* Gradient overlay */
+}
+
+.icons {
+    position: absolute;
+    top: 20px; /* Adjust position */
+    right: 20px; /* Adjust position */
+    display: flex;
+    flex-direction: column; /* Change to column for vertical stacking */
+    gap: 15px; /* Space between icons */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.icons:hover {
+    transform: scale(1.05); /* Slightly enlarge icons on hover */
+}
+
+.icon-link {
+    color: white; /* Icon color */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.icon-link:hover {
+    color: #1e90ff; /* Change color on hover */
+}
+
+.content {
+    position: relative; /* Position relative for layering */
+    z-index: 1; /* Ensure content appears above the overlay */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+    animation: slideIn 1s ease-in-out; /* Slide-in animation for content */
+}
+
+.name {
+    font-size: 2.5rem; /* Adjust font size as needed */
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    margin: 10px 0;
+}
+
+.button {
+    padding: 10px 20px; /* Button padding */
+    background-color: #1e90ff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Enlarge button on hover */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        opacity: 1; /* End visible */
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px); /* Start above */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+        opacity: 1; /* End visible */
+    }
+}
+
+/* Additional Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        height: 50vh; /* Decrease height for smaller screens */
+    }
+
+    .name {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    .subtitle {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .button {
+        padding: 8px 16px; /* Adjust button padding */
+    }
+
+    .icons {
+        top: 15px; /* Adjust position for smaller screens */
+        right: 15px; /* Adjust position for smaller screens */
+    }
+
+    .icon-link {
+        font-size: 1.5rem; /* Adjust icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 40vh; /* Further decrease height for mobile */
+        width: 100%;
+    }
+
+    .name {
+        font-size: 1.5rem; /* Further adjust font size */
+    }
+
+    .subtitle {
+        font-size: 0.875rem; /* Further adjust font size */
+    }
+
+       .icons {
+        top: 10px; /* Adjust position for mobile */
+        right: 10px; /* Adjust position for mobile */
+        font-size: 10rem; /* Further adjust icon size */
+    }
+
+    .icon-link {
+        font-size: 1rem; /* Further adjust icon size */
+    }
+}

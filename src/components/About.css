@@ -1,0 +1,28 @@
+/* About.css */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-20px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .about {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  .text:hover {
+    color: #1e90ff; /* Change text color on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+  }
+  
