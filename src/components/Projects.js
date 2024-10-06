@@ -12,26 +12,35 @@ const projectsData = [
   },
   {
     title: 'Seam Carver',
-    description: 'A simple task manager built with Node.js and Express.',
+    description: 'Developed a seam carving algorithm for content-aware image resizing, effectively preserving important content while reducing image dimensions. Features include:\n' +
+                 '• Implemented a C++ application using OpenCV to identify and remove the least important pixels (seams) from images.\n' +
+                 '• Conducted tests on various images, demonstrating significant improvements in maintaining key visual elements compared to traditional resizing methods.\n' +
+                 '• Designed a user-friendly interface for uploading images and visualizing the seam carving process.',
     liveLink: 'https://seam-carving-1.onrender.com/', // Example link
     repoLink: 'https://github.com/karunsehwag/seam_carving', // Example GitHub link
-    readMoreLink: 'https://example.com/todo-app-details', // Example Read More link
+    readMoreLink: 'https://example.com/seam-carver-details', // Example Read More link
   },
   {
     title: 'Books Library',
-    description: 'A simple task manager built with Node.js and Express.',
-    liveLink: 'https://example.com/todo-app', // Example link
+    description: 'A web application for managing a personal book library, built with Node.js and Express.',
+    liveLink: 'https://example.com/books-library', // Example link
     repoLink: 'https://github.com/serc-courses/se-project-1--_27', // Example GitHub link
-    readMoreLink: 'https://example.com/todo-app-details', // Example Read More link
+    readMoreLink: 'https://example.com/books-library-details', // Example Read More link
   },
   {
     title: 'Kids Game',
-    description: 'A simple task manager built with Node.js and Express.',
-    liveLink: 'https://example.com/todo-app', // Example link
+    description: 'Implemented interactive kids’ games: “Spot the Difference”, “Match Pairs”, and “What Goes Together” using HTML, CSS, and JavaScript. Designed to enhance cognitive skills through engaging activities. Features include:\n' +
+                 '• Created responsive user interfaces with Bootstrap, ensuring compatibility across various devices and screen sizes.\n' +
+                 '• “Match Pairs”: Designed a memory game where players match pairs of cards, enhancing memory and concentration.\n' +
+                 '• “What Goes Together”: Implemented a game where children pair related items, fostering logical thinking and association skills.\n' +
+                 '• “Spot the Difference”: Developed a game where children identify differences between two similar images, improving attention to detail.',
+    liveLink: 'https://karunsehwag.github.io/kids-game/', // Example link
     repoLink: 'https://github.com/serc-courses/se-project-1--_27', // Example GitHub link
-    readMoreLink: 'https://example.com/todo-app-details', // Example Read More link
+    readMoreLink: 'https://example.com/kids-game-details', // Example Read More link
   },
 ];
+
+
 
 function Projects() {
   return (

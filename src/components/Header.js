@@ -15,7 +15,7 @@ function Header() {
         <a href="https://github.com/karunsehwag" target="_blank" rel="noopener noreferrer" className="icon-link">
           <FaGithub size={20} />
         </a>
-        <a href="tel:917060491349" className="icon-link">
+        <a href="tel:+917060491349" className="icon-link">
           <FaPhone size={20} />
         </a>
         <a 
