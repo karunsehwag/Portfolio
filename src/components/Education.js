@@ -16,7 +16,7 @@ function Education() {
           <p style={styles.description}>
             Graduated with a focus on software engineering and web development.
             <br />
-            CGPA: 6.94
+            CGPA: 7.58
           </p>
         </div>
 
