@@ -12,7 +12,7 @@ function Education() {
         <div className="educationItem" style={styles.educationItem}>
           <FaGraduationCap style={styles.icon} />
           <h3 style={styles.degree}>Master in Computer Science and Engineering</h3>
-          <p style={styles.school}>IIIT HYDERABAD, 2023 - PRESENT</p>
+          <p style={styles.school}>IIIT HYDERABAD, 2023 - 2025</p>
           <p style={styles.description}>
             Graduated with a focus on software engineering and web development.
             <br />
