@@ -127,10 +127,6 @@ const styles = {
   },
 };
 
-// Add hover effect for project cards
-const projectCardHover = {
-  transform: 'scale(1.05)',
-  boxShadow: '0 6px 12px rgba(0, 0, 0, 0.15)',
-};
+
 
 export default Projects;

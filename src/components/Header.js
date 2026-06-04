@@ -19,7 +19,7 @@ function Header() {
           <FaPhone size={20} />
         </a>
         <a 
-  href="#" 
+  href="mailto:karunchoudhary2000@gmail.com" 
   className="icon-link" 
   onClick={() => {
     console.log("Mailto link clicked");
