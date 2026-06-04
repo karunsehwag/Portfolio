@@ -1,7 +1,7 @@
 // src/components/CourseWork.js
 import React, { useState } from 'react';
 import './CourseWork.css'; // Import the CSS file for styles
-import { FaLaptopCode, FaDatabase, FaRobot, FaBrain, FaDesktop, FaNetworkWired, FaMicrochip, FaChartLine, FaBars, FaCode } from 'react-icons/fa';
+import { FaLaptopCode, FaDatabase, FaDesktop, FaNetworkWired, FaMicrochip, FaChartLine, FaBars, FaCode } from 'react-icons/fa';
 
 
 const courseData = [

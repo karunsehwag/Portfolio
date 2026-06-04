@@ -1,42 +1,57 @@
-// src/App.js
+// src/components/Footer.js
 import React from 'react';
-import Header from './components/Header';
-import About from './components/About';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Footer from './components/Footer';
-import Education from './components/Education';
-import CourseWork from './components/CourseWork';
-import Achievements from './components/Achievements';  // Import the CourseWork component
-import './App.css'; // Import your CSS file
+import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'; // Import social media icons
 
-function App() {
+function Footer() {
   return (
-    <div className="app"> {/* Use the app class here */}
-      <Header />
+    <footer style={styles.footer}>
       <div style={styles.container}>
-        <About />
-        <Education />
-        <CourseWork /> {/* Include the CourseWork component */}
-        <Projects />
-        
-        <Skills />
-        <Achievements /> {/* Include the Achievements section here */}
-        {/* <Experience /> */}
-        
+        <p style={styles.copy}></p>
+        <div style={styles.socialLinks}>
+          <a href="https://www.linkedin.com/in/karun-choudhary-108982191" style={styles.icon} target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href="https://github.com/karunsehwag" style={styles.icon} target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+        </div>
       </div>
-      <Footer />
-    </div>
+    </footer>
   );
 }
 
 const styles = {
+  footer: {
+    padding: '20px',
+    textAlign: 'center',
+    backgroundColor: '#282c34',
+    color: 'white',
+  },
   container: {
-    maxWidth: '1200px', // Maximum width to keep content centered
-    margin: '0 auto', // Center the content
-    padding: '0 20px', // Padding for mobile responsiveness
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  copy: {
+    marginBottom: '10px',
+    fontSize: '14px',
+  },
+  socialLinks: {
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '15px', // Space between icons
+  },
+  icon: {
+    color: 'white',
+    fontSize: '20px',
+    textDecoration: 'none',
+    transition: 'color 0.3s ease',
+  },
+  iconHover: {
+    color: '#61dafb', // Change color on hover
   },
 };
 
-export default App;
+export default Footer;

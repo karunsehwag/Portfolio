@@ -1,6 +1,6 @@
 // src/components/Footer.js
 import React from 'react';
-import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'; // Import social media icons
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function Footer() {
   return (
