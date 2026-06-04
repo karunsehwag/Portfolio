@@ -1,57 +1,38 @@
-// src/components/Footer.js
+// src/App.js
 import React from 'react';
-import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'; // Import social media icons
+import Header from './components/Header';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
+import Education from './components/Education';
+import CourseWork from './components/CourseWork';
+import Achievements from './components/Achievements';
+import './App.css';
 
-function Footer() {
+function App() {
   return (
-    <footer style={styles.footer}>
+    <div className="app">
+      <Header />
       <div style={styles.container}>
-        <p style={styles.copy}></p>
-        <div style={styles.socialLinks}>
-          <a href="https://www.linkedin.com/in/karun-choudhary-108982191" style={styles.icon} target="_blank" rel="noopener noreferrer">
-            <FaLinkedin />
-          </a>
-          <a href="https://github.com/karunsehwag" style={styles.icon} target="_blank" rel="noopener noreferrer">
-            <FaGithub />
-          </a>
-        </div>
+        <About />
+        <Education />
+        <CourseWork />
+        <Projects />
+        <Skills />
+        <Achievements />
       </div>
-    </footer>
+      <Footer />
+    </div>
   );
 }
 
 const styles = {
-  footer: {
-    padding: '20px',
-    textAlign: 'center',
-    backgroundColor: '#282c34',
-    color: 'white',
-  },
   container: {
     maxWidth: '1200px',
     margin: '0 auto',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  copy: {
-    marginBottom: '10px',
-    fontSize: '14px',
-  },
-  socialLinks: {
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '15px', // Space between icons
-  },
-  icon: {
-    color: 'white',
-    fontSize: '20px',
-    textDecoration: 'none',
-    transition: 'color 0.3s ease',
-  },
-  iconHover: {
-    color: '#61dafb', // Change color on hover
+    padding: '0 20px',
   },
 };
 
-export default Footer;
+export default App;

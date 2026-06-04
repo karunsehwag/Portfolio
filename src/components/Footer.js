@@ -41,7 +41,7 @@ const styles = {
   socialLinks: {
     display: 'flex',
     justifyContent: 'center',
-    gap: '15px', // Space between icons
+    gap: '15px',
   },
   icon: {
     color: 'white',
@@ -50,7 +50,7 @@ const styles = {
     transition: 'color 0.3s ease',
   },
   iconHover: {
-    color: '#61dafb', // Change color on hover
+    color: '#61dafb',
   },
 };
 
