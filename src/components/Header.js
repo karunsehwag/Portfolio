@@ -33,9 +33,7 @@ function Header() {
       <div className="content">
         <h1 className="name">KARUN CHOUDHARY</h1>
         <p className="subtitle">Full-Stack Developer | Open Source Enthusiast</p>
-        <button className="button" onClick={() => window.open('/resume.pdf')}>
-          Download Resume
-        </button>
+        
       </div>
     </header>
   );

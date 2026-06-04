@@ -1,6 +1,6 @@
 // src/components/Projects.js
 import React from 'react';
-import { FaExternalLinkAlt, FaCode, FaBookOpen } from 'react-icons/fa'; // Import icons
+import { FaExternalLinkAlt, FaCode } from 'react-icons/fa'; // Import icons
 
 const projectsData = [
   {
