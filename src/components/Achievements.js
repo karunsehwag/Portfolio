@@ -1,86 +1,77 @@
 // src/components/Achievements.js
 import React from 'react';
-import { Box, Card, Typography, Grid } from '@mui/material';
-import { motion } from 'framer-motion';
-import { FaTrophy, FaMedal, FaLaptopCode, FaCheckCircle, FaCodeBranch } from 'react-icons/fa';
-
-const achievementsData = [
-  {
-    icon: FaCodeBranch,
-    stat: '6+',
-    label: 'Merged OSS PRs',
-    sub: 'Kubernetes · Redis · OpenAPI Generator',
-  },
-  {
-    icon: FaTrophy,
-    stat: '#258',
-    label: 'Google Hash Code 2021',
-    sub: 'Global Rank',
-  },
-  {
-    icon: FaMedal,
-    stat: '97.82%ile',
-    label: 'GATE CS 2023',
-    sub: 'Among 75,680 candidates',
-  },
-  {
-    icon: FaLaptopCode,
-    stat: '700+',
-    label: 'LeetCode',
-    sub: 'Problems solved',
-  },
-  {
-    icon: FaCheckCircle,
-    stat: '2018',
-    label: 'JEE Mains',
-    sub: 'Cleared',
-  },
-];
+//import './Achievements.css'; // Import the CSS file for styles
+import { FaTrophy } from 'react-icons/fa'; // Import trophy icon
 
 function Achievements() {
+  const achievementsData =  [
+    { year: 2024, achievement: 'Completed more than 700 coding questions ' },
+    { year: 2023, achievement: 'Cleared Gate' },
+    { year: 2018, achievement: 'Claered Jee mains' },
+  ];
+
   return (
-    <Box component="section" id="achievements">
-      <Typography variant="h2" sx={{ fontSize: { xs: '1.8rem', md: '2.2rem' }, textAlign: 'center', mb: 4 }}>
-        Achievements
-      </Typography>
-      <Grid container spacing={2.5} sx={{ maxWidth: 950, mx: 'auto' }} justifyContent="center">
+    <section style={styles.achievements}>
+      <div style={styles.container}>
+        <h2 style={styles.heading}>Achievements</h2>
+
         {achievementsData.map((item, index) => (
-          <Grid item xs={6} sm={4} md={2.4} key={item.label}>
-            <Card
-              component={motion.div}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.4, delay: index * 0.08, ease: 'easeOut' }}
-              sx={{ p: { xs: 2, md: 3 }, textAlign: 'center', height: '100%' }}
-            >
-              <Box sx={{ color: 'primary.main', fontSize: '1.8rem', mb: 1 }}>
-                <item.icon />
-              </Box>
-              <Typography
-                variant="h5"
-                sx={{
-                  fontWeight: 800,
-                  background: 'linear-gradient(135deg, #22d3ee, #a855f7)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                {item.stat}
-              </Typography>
-              <Typography variant="subtitle2" sx={{ fontWeight: 700, mt: 0.5 }}>
-                {item.label}
-              </Typography>
-              <Typography variant="caption" sx={{ color: 'text.secondary', display: 'block' }}>
-                {item.sub}
-              </Typography>
-            </Card>
-          </Grid>
+          <div key={index} className="achievementItem" style={styles.achievementItem}>
+            <FaTrophy style={styles.icon} />
+            <div style={styles.textContainer}>
+              <p style={styles.year}>{item.year}</p>
+              <p style={styles.description}>{item.achievement}</p>
+            </div>
+          </div>
         ))}
-      </Grid>
-    </Box>
+      </div>
+    </section>
   );
 }
+
+const styles = {
+  achievements: {
+    //backgroundColor: '#f5f5f5', // Soft background color for the achievements section
+    padding: '40px 0', // Reduced padding for less space
+    textAlign: 'center',
+    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
+  },
+  container: {
+    maxWidth: '600px', // Reduced max width for compactness
+    margin: '0 auto',
+    padding: '0 20px', // Padding for responsiveness
+  },
+  heading: {
+    fontSize: '2rem', // Reduced font size for heading
+    marginBottom: '20px', // Reduced margin below heading
+    color: '#333',
+  },
+  achievementItem: {
+    display: 'flex',
+    alignItems: 'flex-start', // Align items at the start
+    marginBottom: '15px', // Reduced margin for achievement items
+    transition: 'transform 0.3s', // Transition for hover effect
+    justifyContent: 'flex-start', // Align items to the start
+  },
+  icon: {
+    fontSize: '1.5rem', // Reduced font size for the icon
+    color: '#ff9800', // Color for the trophy icon
+    marginRight: '10px', // Space between icon and text
+  },
+  textContainer: {
+    textAlign: 'left', // Align text to the left
+  },
+  year: {
+    fontSize: '1.3rem', // Reduced font size for the year
+    color: '#444',
+    margin: '0', // Remove margin for compactness
+  },
+  description: {
+    fontSize: '0.9rem', // Reduced font size for description
+    lineHeight: '1.4', // Adjusted line height for compactness
+    color: '#555',
+    margin: '0', // Remove margin for compactness
+  },
+};
 
 export default Achievements;

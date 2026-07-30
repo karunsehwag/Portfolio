@@ -1,56 +1,38 @@
 // src/App.js
-import React, { useMemo, useState } from 'react';
-import { ThemeProvider, CssBaseline, Box, Stack } from '@mui/material';
-import { getTheme } from './theme';
+import React from 'react';
 import Header from './components/Header';
-import Achievements from './components/Achievements';
 import About from './components/About';
-import Experience from './components/Experience';
-import OpenSource from './components/OpenSource';
-import Education from './components/Education';
-import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 import Footer from './components/Footer';
+import Education from './components/Education';
+import CourseWork from './components/CourseWork';
+import Achievements from './components/Achievements';
 import './App.css';
 
-const STORAGE_KEY = 'portfolio-theme-mode';
-
-function getInitialMode() {
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === 'light' || stored === 'dark') return stored;
-  return window.matchMedia?.('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-}
-
 function App() {
-  const [mode, setMode] = useState(getInitialMode);
-  const theme = useMemo(() => getTheme(mode), [mode]);
-
-  const toggleMode = () => {
-    setMode((prev) => {
-      const next = prev === 'dark' ? 'light' : 'dark';
-      localStorage.setItem(STORAGE_KEY, next);
-      return next;
-    });
-  };
-
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Box className="app">
-        <Header mode={mode} toggleMode={toggleMode} />
-        <Stack spacing={{ xs: 6, md: 10 }} sx={{ maxWidth: 1200, mx: 'auto', px: { xs: 2, sm: 3 }, py: { xs: 6, md: 10 } }}>
-          <Achievements />
-          <About />
-          <Experience />
-          <OpenSource />
-          <Education />
-          <Projects />
-          <Skills />
-        </Stack>
-        <Footer />
-      </Box>
-    </ThemeProvider>
+    <div className="app">
+      <Header />
+      <div style={styles.container}>
+        <About />
+        <Education />
+        <CourseWork />
+        <Projects />
+        <Skills />
+        <Achievements />
+      </div>
+      <Footer />
+    </div>
   );
 }
+
+const styles = {
+  container: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '0 20px',
+  },
+};
 
 export default App;

@@ -1,0 +1,25 @@
+/* src/components/CourseWork.css */
+.courseItem {
+    background: linear-gradient(135deg, #e0f7fa, #f1f8e9); /* Colorful gradient background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding for spacing */
+    margin: 20px 0; /* Margin between items */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    opacity: 0; /* Start invisible for animation */
+    transform: translateY(20px); /* Start slightly below */
+    animation: fadeInUp 0.5s forwards; /* Fade-in and slide-up animation */
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* End visible */
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Delay animations for each item */
+.courseItem:nth-child(1) { animation-delay: 0s; }
+.courseItem:nth-child(2) { animation-delay: 0.1s; }
+.courseItem:nth-child(3) { animation-delay: 0.2s; }
+.courseItem:nth-child(4) { animation-delay: 0.3s; }

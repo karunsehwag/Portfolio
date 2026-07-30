@@ -1,40 +1,82 @@
 // src/components/About.js
-import React from 'react';
-import { Box, Card, CardContent, Typography } from '@mui/material';
-import { motion } from 'framer-motion';
-import { FaUserCircle } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react';
+import './About.css'; // Import the CSS file for styles
+import { FaUserCircle } from 'react-icons/fa'; // Import an icon
 
 function About() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById('about');
+      const { top } = section.getBoundingClientRect();
+      if (top < window.innerHeight) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <Box
-      component={motion.section}
+    <section
       id="about"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      style={{ ...styles.about, backgroundImage: 'url("path_to_your_background_image.jpg")' }} // Add a background image
     >
-      <Card sx={{ maxWidth: 800, mx: 'auto', p: { xs: 3, md: 5 }, textAlign: 'center' }}>
-        <CardContent>
-          <FaUserCircle size={48} color="#a855f7" style={{ marginBottom: 16 }} />
-          <Typography variant="h2" sx={{ fontSize: { xs: '1.8rem', md: '2.2rem' }, mb: 3 }}>
-            About Me
-          </Typography>
-          <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, color: 'text.secondary', mb: 2 }}>
-            I'm Karun Choudhary, a Software Engineer building production distributed systems and AI
-            infrastructure at Synactive Inc. My work spans concurrent server architecture, JVM performance
-            diagnostics, and embedding native runtimes into production services — the kind of systems-level
-            problems that show up under real concurrency and scale.
-          </Typography>
-          <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, color: 'text.secondary' }}>
-            Outside of work, I contribute to open-source infrastructure projects like Kubernetes, Redis, and
-            Spring Framework, and stay sharp with competitive programming — 700+ problems solved on LeetCode
-            and a Global Rank of 258 at Google Hash Code 2021.
-          </Typography>
-        </CardContent>
-      </Card>
-    </Box>
+      <div style={styles.container}>
+        <FaUserCircle style={styles.icon} /> {/* User icon */}
+        <h2 style={{ ...styles.heading, opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(-20px)', transition: 'opacity 0.5s ease, transform 0.5s ease' }}>
+          About Me
+        </h2>
+        <p style={{ ...styles.text, opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(-20px)', transition: 'opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s' }}>
+        I'm Karun Choudhary, an aspiring Full-Stack Developer with a keen interest in building web applications.
+         As a beginner, I am eager to learn and explore modern web technologies while continuously improving my skills.
+        </p>
+        <p style={{ ...styles.text, opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(-20px)', transition: 'opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s' }}>
+        In addition to coding, I enjoy traveling and seeking opportunities to grow in the field of web development.
+        </p>
+      </div>
+    </section>
   );
 }
+
+const styles = {
+  about: {
+    backgroundColor: '#fff',
+    backgroundSize: 'cover', // Cover the entire section
+    backgroundPosition: 'center',
+    padding: '60px 0', // Add vertical padding for more space
+    textAlign: 'center',
+    color: '#444', // Default text color
+  },
+  container: {
+    maxWidth: '800px',
+    margin: '0 auto',
+    padding: '0 20px', // Padding for responsiveness
+    position: 'relative', // Position relative for the icon
+    zIndex: 1, // Ensure text is above the background
+  },
+  icon: {
+    fontSize: '4rem',
+    color: '#ff9800', // Icon color
+    marginBottom: '20px', // Space between icon and heading
+    animation: 'bounce 1s infinite', // Simple bounce animation
+  },
+  heading: {
+    fontSize: '2.5rem',
+    marginBottom: '30px',
+    opacity: 0, // Start invisible, transition will handle opacity
+  },
+  text: {
+    fontSize: '1.2rem',
+    lineHeight: '1.8',
+    marginBottom: '20px',
+    color: '#555',
+    transition: 'color 0.3s ease',
+  },
+};
 
 export default About;
