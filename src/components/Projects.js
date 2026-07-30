@@ -1,6 +1,6 @@
 // src/components/Projects.js
 import React from 'react';
-import { Box, Card, CardContent, Typography, Grid, Button, Stack, Chip, List, ListItem } from '@mui/material';
+import { Box, Card, CardContent, Typography, Button, Stack, Chip, List, ListItem } from '@mui/material';
 import { motion } from 'framer-motion';
 import { FaExternalLinkAlt, FaCode, FaGithub } from 'react-icons/fa';
 
@@ -122,7 +122,7 @@ const moreRepos = [
 
 function Projects() {
   return (
-    <Box component="section" id="projects">
+    <Box component="section" id="projects" sx={{ overflow: 'hidden' }}>
       <Typography variant="h2" sx={{ fontSize: { xs: '1.8rem', md: '2.2rem' }, textAlign: 'center', mb: 4 }}>
         Projects
       </Typography>
@@ -215,59 +215,64 @@ function Projects() {
       <Typography variant="subtitle1" sx={{ textAlign: 'center', fontWeight: 700, mb: 3, color: 'text.secondary' }}>
         More Projects
       </Typography>
-      <Grid container spacing={3}>
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
+          gap: 3,
+        }}
+      >
         {otherProjects.map((project, index) => (
-          <Grid item xs={12} sm={6} md={4} key={project.title}>
-            <Card
-              component={motion.div}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.4, delay: (index % 6) * 0.06, ease: 'easeOut' }}
-              whileHover={{ y: -6 }}
-              sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-            >
-              <CardContent sx={{ p: 3, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-                <Typography variant="h6" sx={{ fontWeight: 700, mb: 1.5 }}>
-                  {project.title}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{ color: 'text.secondary', whiteSpace: 'pre-line', mb: 2.5, flexGrow: 1 }}
-                >
-                  {project.description}
-                </Typography>
-                <Stack direction="row" spacing={1.5} flexWrap="wrap" useFlexGap>
-                  {project.liveLink && (
-                    <Button
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      variant="contained"
-                      size="small"
-                      startIcon={<FaExternalLinkAlt size={13} />}
-                    >
-                      Live
-                    </Button>
-                  )}
-                  {project.repoLink && (
-                    <Button
-                      href={project.repoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      variant="outlined"
-                      size="small"
-                      startIcon={<FaCode size={13} />}
-                    >
-                      Source
-                    </Button>
-                  )}
-                </Stack>
-              </CardContent>
-            </Card>
-          </Grid>
+          <Card
+            key={project.title}
+            component={motion.div}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.4, delay: (index % 6) * 0.06, ease: 'easeOut' }}
+            whileHover={{ y: -6 }}
+            sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+          >
+            <CardContent sx={{ p: 3, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+              <Typography variant="h6" sx={{ fontWeight: 700, mb: 1.5 }}>
+                {project.title}
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{ color: 'text.secondary', whiteSpace: 'pre-line', mb: 2.5, flexGrow: 1 }}
+              >
+                {project.description}
+              </Typography>
+              <Stack direction="row" spacing={1.5} flexWrap="wrap" useFlexGap>
+                {project.liveLink && (
+                  <Button
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="contained"
+                    size="small"
+                    startIcon={<FaExternalLinkAlt size={13} />}
+                  >
+                    Live
+                  </Button>
+                )}
+                {project.repoLink && (
+                  <Button
+                    href={project.repoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="outlined"
+                    size="small"
+                    startIcon={<FaCode size={13} />}
+                  >
+                    Source
+                  </Button>
+                )}
+              </Stack>
+            </CardContent>
+          </Card>
         ))}
-      </Grid>
+      </Box>
 
       <Box sx={{ mt: 5, textAlign: 'center' }}>
         <Typography variant="subtitle2" sx={{ color: 'text.secondary', mb: 2 }}>
