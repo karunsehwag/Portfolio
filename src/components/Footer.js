@@ -1,57 +1,48 @@
 // src/components/Footer.js
 import React from 'react';
+import { Box, IconButton, Stack, Typography } from '@mui/material';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <footer style={styles.footer}>
-      <div style={styles.container}>
-        <p style={styles.copy}></p>
-        <div style={styles.socialLinks}>
-          <a href="https://www.linkedin.com/in/karun-choudhary-108982191" style={styles.icon} target="_blank" rel="noopener noreferrer">
+    <Box
+      component="footer"
+      sx={{
+        py: 4,
+        textAlign: 'center',
+        borderTop: '1px solid',
+        borderColor: 'divider',
+      }}
+    >
+      <Stack spacing={1.5} alignItems="center">
+        <Stack direction="row" spacing={2}>
+          <IconButton
+            component="a"
+            href="https://www.linkedin.com/in/karun-choudhary-108982191"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            sx={{ '&:hover': { color: 'primary.main' } }}
+          >
             <FaLinkedin />
-          </a>
-          <a href="https://github.com/karunsehwag" style={styles.icon} target="_blank" rel="noopener noreferrer">
+          </IconButton>
+          <IconButton
+            component="a"
+            href="https://github.com/karunsehwag"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            sx={{ '&:hover': { color: 'primary.main' } }}
+          >
             <FaGithub />
-          </a>
-        </div>
-      </div>
-    </footer>
+          </IconButton>
+        </Stack>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          © {new Date().getFullYear()} Karun Choudhary
+        </Typography>
+      </Stack>
+    </Box>
   );
 }
-
-const styles = {
-  footer: {
-    padding: '20px',
-    textAlign: 'center',
-    backgroundColor: '#282c34',
-    color: 'white',
-  },
-  container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  copy: {
-    marginBottom: '10px',
-    fontSize: '14px',
-  },
-  socialLinks: {
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '15px',
-  },
-  icon: {
-    color: 'white',
-    fontSize: '20px',
-    textDecoration: 'none',
-    transition: 'color 0.3s ease',
-  },
-  iconHover: {
-    color: '#61dafb',
-  },
-};
 
 export default Footer;
